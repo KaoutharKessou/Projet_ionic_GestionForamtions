@@ -1,0 +1,7 @@
+{
+  "name": "TP_ioniv",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
