@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Validation</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p><i>****Voici Votre récapitulatif qui valide votre inscription****</i></p>
+  <br>
+
+  <b>Nom Complet: </b>
+  <ion-item> 
+    <ion-label>{{ inscription?.nom }}</ion-label>
+  </ion-item>
+
+  <br>
+  <b>Email: </b>
+  <ion-item> 
+    <ion-label>{{ inscription?.mail}}</ion-label>
+  </ion-item>
+
+  <br>
+
+  <b>Téléphone: </b>
+  <ion-item> 
+    <ion-label>{{ inscription?.phone }}</ion-label>
+  </ion-item>
+   <br>
+
+   <br>
+  <b>Ville: </b>
+  <ion-item> 
+    <ion-label>{{ inscription?.city }}</ion-label>
+  </ion-item>
+  
+
+  <ion-button expand="block" color="success" routerLink="/formations"> Valider</ion-button>
+</ion-content>

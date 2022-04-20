@@ -1,0 +1,21 @@
+ion-content.background{
+    --background: url(../../../assets/img/formation.png)  no-repeat center center / cover;
+}
+.wrap-input {
+    background-color: rgba(255, 255, 255, .8);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 30px 0px rgba(57, 71, 82, 0.12);
+  }
+
+  .input {
+    width: 100%;
+    background: transparent;
+    font-family: Josefin Sans;
+    font-size: 20px;
+    line-height: 1;
+    border: none;
+    outline: none;
+    height: 37px;
+    padding: 0 10px 0 10px; 
+  }

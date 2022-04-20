@@ -1,0 +1,46 @@
+<ion-header>
+<ion-toolbar>
+  <!-- bouton back-->
+  <ion-buttons slot="start">
+    <ion-back-button></ion-back-button>
+  </ion-buttons>
+   <!--***Bouton deconnexion***-->
+   <ion-buttons slot="end">
+    <ion-button (click)="authService.SignOut()">
+      <ion-icon slot="icon-only" name="log-out"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+  <ion-title>{{ formation?.title }}</ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+<b>Formation :</b>
+<ion-item> 
+  <ion-label>{{formation?.title}}</ion-label>
+</ion-item>
+
+<br>
+
+<b>Description : </b>
+<ion-item class="desc"> 
+  <p>{{ formation?.description }}</p>
+</ion-item>
+
+<br>
+
+<b>Prix : </b>
+<ion-item> 
+  <ion-label>{{ formation?.prix }}</ion-label>
+</ion-item>
+
+<br>
+
+<b>Date : </b>
+<ion-item> 
+  <ion-label>{{ formation?.date}}</ion-label>
+</ion-item>
+
+
+</ion-content>

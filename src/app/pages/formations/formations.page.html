@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>FORMATIONS</ion-title>
+    <!--***Bouton deconnexion***-->
+    <ion-buttons slot="end">
+      <ion-button (click)="authService.SignOut()">
+        <ion-icon slot="icon-only" name="log-out"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+    <!--***lsiter les formations***-->
+<ion-content class="padding">
+  <p>Nous recevons de temps à autre des demandes d’étudiants à la recherche de cours pour apprendre des langages</p>
+  <b> Nos Formations :</b>
+ 
+  <ion-card *ngFor="let formation of FormationList| async">
+
+    <img [src]="formation.imageUrl">
+    <ion-item> 
+       <ion-label>{{formation.title}}</ion-label>
+    </ion-item>
+
+    <ion-button routerLink="/detail/{{formation.id}}">Details</ion-button>
+    <ion-button routerLink="/form-incription/{{formation.id}}"> Inscription </ion-button>
+  </ion-card>
+</ion-content>
+

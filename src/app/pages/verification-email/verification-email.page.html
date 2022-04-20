@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Verificaton Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <ion-grid>
+    <ion-row>
+      <b>Verificaton Email</b>
+      <p class="txt">
+        Veuillez vérifier votre Email en cliquant sur le lien pour vérifier votre adresse Email.
+      </p>
+      <ion-button type="submit" (click)="authService.SendVerificationMail()" expand="block"  [routerLink]="['/login']">
+        Envoyer Email de Verificaton
+      </ion-button>
+    </ion-row>
+  </ion-grid>
+</ion-content>

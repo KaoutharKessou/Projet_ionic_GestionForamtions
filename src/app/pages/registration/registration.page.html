@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Registration</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding class="background">
+  <form (submit)="signUp(email, password)" novalidate  class="ion-padding">
+      
+    <ion-item lines="full" class="wrap-input">
+      <ion-label position="floating" class="input">Email</ion-label>
+      <ion-input type="email" #email required></ion-input>
+    </ion-item> 
+    <ion-item lines="full" class="wrap-input">
+      <ion-label position="floating" class="input">Mot de Passe</ion-label>
+      <ion-input type="password" #password required></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col> 
+      <ion-button type="submit" (click)="signUp(email, password)" expand="block">Register</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-content>

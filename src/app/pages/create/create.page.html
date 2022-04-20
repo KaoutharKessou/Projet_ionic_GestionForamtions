@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+      <!-- bouton back-->
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Ajouter Formation </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <form [formGroup]="createFormationForm" (submit)="createFormation()">
+    <ion-item>
+      <ion-label stacked>Title</ion-label>
+      <ion-input formControlName="title" type="text" placeholder="titre de la formation"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Description</ion-label>
+      <ion-input formControlName="description" type="text" placeholder="description de la formation"> </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Prix</ion-label>
+      <ion-input formControlName="prix" type="text" placeholder="prix de la formation"> </ion-input>
+    </ion-item>
+
+
+    <!--desactiver le bonton ajout jusqu a remplir tous les champs= required-->
+    <ion-button expand="block" type="submit" [disabled]="!createFormationForm.valid"> Ajouter formation </ion-button>
+  </form>
+</ion-content>
